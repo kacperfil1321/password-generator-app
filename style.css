@@ -1,0 +1,211 @@
+body{
+    min-width: 370px;
+    margin: 0;
+    background-color: #18171F;
+    color: #E6E5EA;
+    font-family: 'JetBrains Mono', monospace;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+    position: relative;
+}
+
+.title{
+    color: #817D92;
+    font-weight: bold;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.passwordBox #password{
+    color: #817D92;
+}
+
+.passwordBox, .passwordConditions{
+    background-color: #24232C;
+    padding: 15px 20px;
+    min-width: 320px;
+}
+
+.passwordBox{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.passwordBox .copy{
+    display: flex;
+    align-items: center;
+}
+
+.passwordBox .copy .copied{
+    display: block;
+    opacity: 0;
+    margin-right: 10px;
+    text-transform: uppercase;
+    color: #A4FFAF;
+    cursor: default;
+    transition-duration: 0.3s;
+}
+
+.passwordBox .copy img{
+    cursor: pointer;
+}
+
+.lengthBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lengthBox #length{
+    font-size: 25px;
+    color: #A4FFAF;
+}
+
+#slider{
+    width: 100%;
+    height: 7px;
+    appearance: none;
+    background: linear-gradient(to right, #A4FFAF 0%, #A4FFAF 50%, #18171F 50%, #18171F 100%);
+    margin: 20px 0;
+}
+
+#slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: solid #E6E5EA 2px;
+    background: #E6E5EA;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+#slider::-webkit-slider-thumb:hover{
+    background-color: #18171F;
+    border-color: #A4FFAF;
+    transition-duration: 0.3s;
+}
+
+.condition{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.condition .checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border: solid #E6E5EA 2px;
+    margin-right: 10px;
+    transition-duration: 0.3s;
+}
+
+.condition .checked{
+    background-color: #A4FFAF;
+    border-color: #A4FFAF;
+}
+
+.condition .checkbox:hover{
+    border-color: #A4FFAF;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.strengthBox{
+    background-color: #18171F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.strengthBox .text{
+    color: #817D92;
+    text-transform: uppercase;
+}
+
+.strengthBox #strength #value{
+    text-transform: uppercase;
+}
+
+.strengthBox #strength, .strengthBox #strength .strengthDots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.strengthBox #strength .strengthDots .dot{
+    height: 18px;
+    width: 5px;
+    margin: 0 2px;
+    border: solid #E6E5EA 2px;
+}
+
+.too-weak .dot:nth-child(1){
+    background-color: #F64A4A;
+    border-color: #F64A4A !important;
+}
+
+.weak .dot:nth-child(1), .weak .dot:nth-child(2){
+    background-color: #FB7C58;
+    border-color: #FB7C58 !important;
+}
+
+.medium .dot:nth-child(1), .medium .dot:nth-child(2), .medium .dot:nth-child(3){
+    background-color: #F8CD65;
+    border-color: #F8CD65 !important;
+}
+
+.strong .dot{
+    background-color: #A4FFAF;
+    border-color: #A4FFAF !important;
+}
+
+#generate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #A4FFAF;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin-top: 20px;
+    border: solid #A4FFAF 2px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+#generate:hover{
+    color: #A4FFAF;
+    background-color: #24232C;
+    transition-duration: 0.3s;
+}
+
+#generate:hover path{
+    fill: #A4FFAF;
+    transition-duration: 0.3s;
+}
+
+#generate path{
+    transition-duration: 0.3s;
+}
+
+#generate svg{
+    margin-left: 20px;
+}
